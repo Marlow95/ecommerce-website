@@ -1,0 +1,27 @@
+{
+    "name": "marlow/elitestore",
+    "description": "An ecommerce store made in php",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Marlow Collins",
+            "email": "marlowcollins95@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8000",
+        "test": "vendor/bin/phpunit tests"
+    },
+    "scripts-descriptions": {
+        "start": "starts the server",
+        "test": "type composer test to run all tests or composer test /[classname].php for individual tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "codedungeon/phpunit-result-printer": "^0.32.0"
+    }
+}
