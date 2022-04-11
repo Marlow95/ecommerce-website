@@ -33,11 +33,11 @@ class Users implements RepositoryInterface
 
         foreach($data as $users)
         {
-            print_r(json_encode($users));
+            print_r($users);
         }
     }
 }
 
-//$users = new Users();
+$users = new Users();
 //$users->getAll($db);
-//$users->getOne($db, 1);
+$users->getOne($db, 1);

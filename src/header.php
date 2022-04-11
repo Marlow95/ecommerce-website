@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-function renderHeader(string $home, string $about){
-    echo(
+function renderHeader($home, $about){
+   return (
         '<ul>
             <li>
                 <a href="'.$home.'">Home</a>
