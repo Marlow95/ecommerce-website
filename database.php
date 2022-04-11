@@ -35,7 +35,7 @@ class Database
 
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo "<h5>Database connected.</h5>";
+            //echo "<h5>Database connected.</h5>";
 
         } catch(PDOException $e){
             
@@ -43,12 +43,12 @@ class Database
         }
     }
 
-    public function queryData($column)
+    public function getOneColumn($table, $col)
     {
-        $db_data = $this->pdo->query('SELECT * FROM ' . $column);
+        $db_data = $this->pdo->query('SELECT * FROM ' . $table);
         
         foreach($db_data as $data){
-            echo '</br>' . $data["UserName"] . '</br>';
+            echo '</br>' . $data[$col] . '</br>';
         }
     }
 

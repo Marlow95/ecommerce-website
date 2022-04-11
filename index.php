@@ -1,26 +1,17 @@
-<?php
-include('database.php');
-print "<h1>Hello World</h1>";
+<?php 
+require_once('database.php');
 ?>
 
-<ul>
-    <li>
-        <a href="index.php">Home</a>
-    </li>
+<h1>The Elite Store</h1>
 
-    <li>
-    <a href="src/about.php">About</a>
-    </li>
-
-</ul>
-
+<?php include_once('header.php'); ?>
 
 <?php
 
-$sql = new Database('mysql', '127.0.0.1', '3306', 'testdb', 'marlowc', '');
-$sql->connectDatabase();
-$sql->queryData("Users");
-var_dump($sql->pdo->query('SELECT * FROM Users'));
+$db = new Database('mysql', '127.0.0.1', '3306', 'testdb', 'marlowc', '');
+$db->connectDatabase();
+$db->getOneColumn("Users", "UserName");
+//var_dump($sql->pdo->query('SELECT * FROM Users'));
 
 
 
