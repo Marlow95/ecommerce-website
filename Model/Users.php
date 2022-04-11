@@ -1,8 +1,8 @@
 <?php
-include_once('Crud.php');
+include_once('RepositoryInterface.php');
 include_once('./Database.php');
 
-class Users implements Crud
+class Users implements RepositoryInterface
 {
     function getAll(Database $db)
     {
@@ -15,7 +15,7 @@ class Users implements Crud
 
         foreach($data as $users)
         {
-            print_r(json_encode($users));
+            print_r($users);
         }
     }
 
@@ -33,7 +33,7 @@ class Users implements Crud
 
         foreach($data as $users)
         {
-            print_r($users);
+            print_r(json_encode($users));
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php 
 
-function renderHeader($home, $about){
+function renderHeader(string $home, string $about){
     echo(
         '<ul>
             <li>
