@@ -43,21 +43,5 @@ class Database
             exit;
         }
     }
-
-    public function getOneColumn($table, $col)
-    {
-        try{
-            $db_data = $this->pdo->query('SELECT * FROM ' . $table);
-        } catch(Exception $e){
-            echo "<h1 style=\"color: red\">Oops, Sorry I Can't Query Data.</h1>";
-            exit;
-        }
-        
-        foreach($db_data as $data)
-        {
-            echo '</br>' . $data[$col] . '</br>';
-        }
-    }
-
-
 }
+

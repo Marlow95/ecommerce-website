@@ -1,5 +1,6 @@
 <?php
-require_once('./ConnectDatabase.php');
+require_once('./App/Database.php');
+require_once('./App/Config.php');
 
 interface RepositoryInterface
 {

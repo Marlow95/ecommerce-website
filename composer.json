@@ -3,7 +3,7 @@
     "description": "An ecommerce store made in php",
     "autoload": {
         "classmap": [
-            "src/"
+            "public/src/"
         ]
     },
     "authors": [
@@ -13,11 +13,9 @@
         }
     ],
     "scripts": {
-        "start": "php -S localhost:8001",
         "test": "vendor/bin/phpunit tests"
     },
     "scripts-descriptions": {
-        "start": "starts the server",
         "test": "type composer test to run all tests or composer test /[classname].php for individual tests"
     },
     "require-dev": {
