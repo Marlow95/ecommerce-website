@@ -16,36 +16,35 @@
         <a class="nav-link" href="<?php echo $routes['our_story'];?>">Our Story</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
+        <a class="nav-link" href="<?php echo $routes['shop'];?>">Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login/Sign Up</a>
+        <a class="nav-link" href="<?php echo $routes['login'];?>">Login/Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="<?php echo $routes['contact_us'];?>">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-shopping-cart text-white" aria-hidden="true"></i></a>
+        <a class="nav-link" href="<?php echo $routes['checkout'];?>"><i class="fa fa-shopping-cart text-white" aria-hidden="true"></i></a>
       </li>
       <li class="nav-item">
         <a class="nav-link enabled" href="#"></a>
       </li>
     </ul>
     <?php
-      $search = isset($_GET['search']) ? $_GET['search'] : '';
+      $search = isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '';
+
     ?>
     <form class="form-inline my-2 my-lg-0 mr-4" method="get">
       <input class="form-inline-control form-control-lg mr-sm-2" type="search" name="search" 
-      placeholder="Search" aria-label="Search" value="<?= htmlentities($search); ?>">
+      placeholder="Search" aria-label="Search" value="<?php $search; ?>">
       <button class="btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
+      <?php // This is for checking outputs ?>
+     <h2 class="text-white"><?php echo $search; ?></h2>
     </form>
   </div>
 </nav>
 <?php 
-
-if(isset($_GET['search'])){
-  echo htmlentities($_GET['search']);
-}
 
 
 
