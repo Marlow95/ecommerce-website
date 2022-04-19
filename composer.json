@@ -1,6 +1,6 @@
 {
     "name": "marlow/elitestore",
-    "description": "An ecommerce store made in php",
+    "description": "An ecommerce store made in php using mvc",
     "autoload": {
         "classmap": [
             "public/src/"

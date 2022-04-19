@@ -31,16 +31,21 @@
         <a class="nav-link enabled" href="#"></a>
       </li>
     </ul>
-    <?php $search = ''; ?>
-    <form class="form-inline my-2 my-lg-0 mr-4" method="<?php $_SERVER['PHP_SELF']; ?>" type="get">
+    <?php
+      $search = isset($_GET['search']) ? $_GET['search'] : '';
+    ?>
+    <form class="form-inline my-2 my-lg-0 mr-4" method="get">
       <input class="form-inline-control form-control-lg mr-sm-2" type="search" name="search" 
-      placeholder="Search" aria-label="Search" value="<?php htmlspecialchars($search); ?>">
+      placeholder="Search" aria-label="Search" value="<?= htmlentities($search); ?>">
       <button class="btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
+<?php 
 
-
+if(isset($_GET['search'])){
+  echo htmlentities($_GET['search']);
+}
 
 
 
