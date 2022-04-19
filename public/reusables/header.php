@@ -9,4 +9,17 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
 <!--Font Awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
  crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="./public/css/styles.css">
 <body>
+<?php require_once('../App/Config.php'); ?>
+<?php $filter_all_post_inputs = filter_input_array(INPUT_POST); ?>
+<?php
+
+$routes = array(
+    'home' => 'index.php',
+    'our_story' => 'our_story.php',
+    'shop' => 'shop.php',
+    'login' => 'login.php',
+    'contact_us' => 'contact_us.php',
+    'checkout' => 'checkout.php'
+);

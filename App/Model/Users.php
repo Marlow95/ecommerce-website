@@ -35,6 +35,7 @@ class Users implements RepositoryInterface
     public static function loginUser(Database $db, $username, $password)
     {
         //add salt and hash later
+        //password_hash & password_verify
         if(isset($_POST['login_submit']))
         {
             try {
